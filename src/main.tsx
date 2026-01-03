@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Provider } from "@/components/ui/provider"
-
-import { enableMocks } from './env';
+import { Provider } from 'react-redux'
+import { store } from './store'
+import { enableMocks } from './env'
 import App from './App.tsx'
 
 const prepareMocks = async () => {
@@ -17,7 +17,7 @@ const prepareMocks = async () => {
 prepareMocks().then(() => {
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
-      <Provider>
+      <Provider store={store}>
         <App />
       </Provider>
     </StrictMode>,

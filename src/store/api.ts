@@ -9,11 +9,11 @@ export const api = createApi({
     }),
     tagTypes: [],
     endpoints: (builder) => ({
-        submitScore: builder.mutation<string, void>({
+        submitScore: builder.mutation<void, string>({
             query: (pastedScore) => ({
                 url: '/scores',
                 method: "POST",
-                body: pastedScore
+                body: { pastedScore },
             }),
         }),
         retrieveScores: builder.query<void, ScoreData>({
