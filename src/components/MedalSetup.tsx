@@ -1,4 +1,4 @@
-import { Grid, Box, Flex, VStack, Heading, Text } from "@chakra-ui/react"
+import { Grid, Flex, VStack, Heading, Text } from "@chakra-ui/react"
 
 const MedalSetup = () => {
     return (

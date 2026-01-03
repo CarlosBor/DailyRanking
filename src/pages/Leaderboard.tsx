@@ -1,8 +1,9 @@
 import { VStack, Heading, SegmentGroup, Button, Box, DataList } from "@chakra-ui/react"
 import { LuArrowLeft } from "react-icons/lu";
+import { useNavigate } from "react-router-dom"
 import MedalSetup from "@/components/MedalSetup";
 const Leaderboard = () => {
-
+const navigate = useNavigate();
     const rankingData = [
         { name: "CluesBySam", score: 1120 },
         { name: "WordleWizard", score: 1085 },
@@ -14,7 +15,7 @@ const Leaderboard = () => {
     return (
         <VStack bgColor="blue.900" minH="100vh" color="white" gap="4">
             <Box w="full" pt={6}>
-                <Button bgColor="blue.900" color="white" fontWeight="semibold"><LuArrowLeft /> Back</Button>
+                <Button bgColor="blue.900" color="white" fontWeight="semibold" onClick={()=> navigate("/")}><LuArrowLeft /> Back</Button>
             </Box>
             <Box px={12} w="full">
                 <VStack mb={12}>
