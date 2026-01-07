@@ -13,7 +13,7 @@ export const api = createApi({
             query: (pastedScore) => ({
                 url: '/scores',
                 method: "POST",
-                body: { pastedScore },
+                body: {pastedScore},
             }),
         }),
         retrieveScores: builder.query<void, ScoreData>({
