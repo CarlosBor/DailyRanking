@@ -1,7 +1,7 @@
 import type { ScoreData } from "../types";
 
 export const mockScoreData: ScoreData = {
-  clues: {
+  CluesBySam: {
     daily: [
       { player: "CluesBySam", score: 1120 },
       { player: "PuzzleFox", score: 1045 },

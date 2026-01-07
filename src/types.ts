@@ -4,7 +4,7 @@ export type Score = {
 }
 
 export type ScoreData = {
-    clues: {
+    CluesBySam: {
         daily: Score[],
         weekly: Score[]
         allTime: Score[]
@@ -20,3 +20,6 @@ export type ScoreData = {
         allTime: Score[]
     }
 }
+
+export type Game = keyof ScoreData;
+export type TimeFrame = "daily" | "weekly" | "allTime";

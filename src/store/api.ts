@@ -16,7 +16,7 @@ export const api = createApi({
                 body: {pastedScore},
             }),
         }),
-        retrieveScores: builder.query<void, ScoreData>({
+        retrieveScores: builder.query<ScoreData[], void>({
             query: () => ({
                 url: '/scores',
                 method: "GET",
